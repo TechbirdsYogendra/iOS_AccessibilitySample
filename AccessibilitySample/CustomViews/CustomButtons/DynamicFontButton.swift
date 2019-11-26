@@ -1,37 +1,21 @@
 //
-//  RoundedButton.swift
+//  DynamicFontButton.swift
 //  AccessibilitySample
 //
-//  Created by Yogendra Singh on 25/11/19.
+//  Created by Yogendra Singh on 26/11/19.
 //  Copyright © 2019 Yogendra Singh. All rights reserved.
 //
 
 import UIKit
 
-class RoundedButton: UIButton {
+class DynamicFontButton: UIButton {
     
-    var buttonCornerRadius: CGFloat = 5.0 {
-        didSet {
-            self.layer.cornerRadius = buttonCornerRadius
-        }
-    }
-    
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-        self.clipsToBounds = true
-        self.layer.cornerRadius = buttonCornerRadius
-    }
-    
-    //MARK: Initializers
-    override init(frame: CGRect) {
-        super.init(frame: frame)
+    required init?(coder aDecoder: NSCoder) {
+        super.init(coder: aDecoder)
         customization()
     }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+    override init(frame: CGRect) {
+        super.init(frame: frame)
         customization()
     }
     
@@ -48,5 +32,7 @@ class RoundedButton: UIButton {
             self.addConstraints([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
             self.layoutIfNeeded()
         }
+        
     }
+    
 }

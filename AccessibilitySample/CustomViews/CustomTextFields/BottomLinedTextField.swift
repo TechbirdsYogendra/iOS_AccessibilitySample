@@ -11,18 +11,18 @@ import UIKit
 class BottomLinedTextField: UITextField {
     
     //MARK: Cosntants.
-    let bottomLineLayer = CALayer()
+    var bottomLineView = UIView()
     
     //MARK: Variables.
     var widthBorder: CGFloat = 1.0 {
         didSet {
-            bottomLineLayer.borderWidth = widthBorder
+            bottomLineView.heightAnchor.constraint(equalToConstant: widthBorder).isActive = true
         }
     }
     
     var colorBorder: UIColor = UIColor.darkGray {
         didSet {
-            bottomLineLayer.borderColor = colorBorder.cgColor
+            bottomLineView.backgroundColor = colorBorder
         }
     }
     
@@ -38,24 +38,38 @@ class BottomLinedTextField: UITextField {
     //MARK: Initializers
     override init(frame: CGRect) {
         super.init(frame: frame)
-        setupBottomLineLayer()
+        setupBottomLineView()
+        setupPlaceHolder()
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setupBottomLineLayer()
+        setupBottomLineView()
+        setupPlaceHolder()
     }
     
     //MARK: Private Methods.
-    private func setupBottomLineLayer() {
-        bottomLineLayer.borderColor = colorBorder.cgColor
-        bottomLineLayer.frame = CGRect(x: 0, y: self.frame.size.height - widthBorder, width: self.frame.size.width, height: self.frame.size.height)
-        bottomLineLayer.borderWidth = widthBorder
-        self.layer.addSublayer(bottomLineLayer)
-        self.layer.masksToBounds = true
+    private func setupBottomLineView() {
         
+        self.translatesAutoresizingMaskIntoConstraints = false
+
+        bottomLineView = UIView.init(frame: CGRect(x: 0, y: 0, width: 0, height: 0))
+        bottomLineView.backgroundColor = colorBorder
+        bottomLineView.translatesAutoresizingMaskIntoConstraints = false
+
+        addSubview(bottomLineView)
+
+        bottomLineView.bottomAnchor.constraint(equalTo: bottomAnchor).isActive = true
+        bottomLineView.leftAnchor.constraint(equalTo: leftAnchor).isActive = true
+        bottomLineView.rightAnchor.constraint(equalTo: rightAnchor).isActive = true
+        bottomLineView.heightAnchor.constraint(equalToConstant: widthBorder).isActive = true
+        
+        
+    }
+    private func setupPlaceHolder() {
         let attributes = [NSAttributedString.Key.foregroundColor: placeholderColor ]
         self.attributedPlaceholder = NSAttributedString(string: placeholder ?? "", attributes: attributes)
     }
-    
 }
+
+

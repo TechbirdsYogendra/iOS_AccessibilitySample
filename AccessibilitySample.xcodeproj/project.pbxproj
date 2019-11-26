@@ -15,12 +15,15 @@
 		F0E28C72238B9A01003884F7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E28C70238B9A01003884F7 /* Main.storyboard */; };
 		F0E28C74238B9A07003884F7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F0E28C73238B9A07003884F7 /* Assets.xcassets */; };
 		F0E28C77238B9A07003884F7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F0E28C75238B9A07003884F7 /* LaunchScreen.storyboard */; };
+		F0F50F7A238CE8B200979D4E /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F50F79238CE8B200979D4E /* UIViewControllerExtension.swift */; };
+		F0F50F7C238CF31300979D4E /* DynamicFontButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F50F7B238CF31300979D4E /* DynamicFontButton.swift */; };
+		F0F50F7E238D1FD600979D4E /* ViewController+Accessibility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0F50F7D238D1FD600979D4E /* ViewController+Accessibility.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F022C13A238BBF0F0048696E /* BottomLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLinedTextField.swift; sourceTree = "<group>"; };
 		F022C13E238BBF770048696E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
-		F0E28C67238B9A00003884F7 /* AccessibilitySample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AccessibilitySample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F0E28C67238B9A00003884F7 /* USBAccessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USBAccessibility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E28C6A238B9A00003884F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E28C6C238B9A01003884F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		F0E28C6E238B9A01003884F7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -28,6 +31,9 @@
 		F0E28C73238B9A07003884F7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F0E28C76238B9A07003884F7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F0E28C78238B9A07003884F7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F0F50F79238CE8B200979D4E /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		F0F50F7B238CF31300979D4E /* DynamicFontButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DynamicFontButton.swift; sourceTree = "<group>"; };
+		F0F50F7D238D1FD600979D4E /* ViewController+Accessibility.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Accessibility.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +59,7 @@
 			isa = PBXGroup;
 			children = (
 				F022C13E238BBF770048696E /* RoundedButton.swift */,
+				F0F50F7B238CF31300979D4E /* DynamicFontButton.swift */,
 			);
 			path = CustomButtons;
 			sourceTree = "<group>";
@@ -77,7 +84,7 @@
 		F0E28C68238B9A00003884F7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F0E28C67238B9A00003884F7 /* AccessibilitySample.app */,
+				F0E28C67238B9A00003884F7 /* USBAccessibility.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -85,6 +92,7 @@
 		F0E28C69238B9A00003884F7 /* AccessibilitySample */ = {
 			isa = PBXGroup;
 			children = (
+				F0F50F78238CE81600979D4E /* Extensions */,
 				F022C13D238BBF4A0048696E /* CustomViews */,
 				F0E28C6A238B9A00003884F7 /* AppDelegate.swift */,
 				F0E28C6C238B9A01003884F7 /* SceneDelegate.swift */,
@@ -95,6 +103,15 @@
 				F0E28C78238B9A07003884F7 /* Info.plist */,
 			);
 			path = AccessibilitySample;
+			sourceTree = "<group>";
+		};
+		F0F50F78238CE81600979D4E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F0F50F79238CE8B200979D4E /* UIViewControllerExtension.swift */,
+				F0F50F7D238D1FD600979D4E /* ViewController+Accessibility.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -114,7 +131,7 @@
 			);
 			name = AccessibilitySample;
 			productName = AccessibilitySample;
-			productReference = F0E28C67238B9A00003884F7 /* AccessibilitySample.app */;
+			productReference = F0E28C67238B9A00003884F7 /* USBAccessibility.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -170,6 +187,9 @@
 			files = (
 				F0E28C6F238B9A01003884F7 /* ViewController.swift in Sources */,
 				F022C13F238BBF770048696E /* RoundedButton.swift in Sources */,
+				F0F50F7C238CF31300979D4E /* DynamicFontButton.swift in Sources */,
+				F0F50F7E238D1FD600979D4E /* ViewController+Accessibility.swift in Sources */,
+				F0F50F7A238CE8B200979D4E /* UIViewControllerExtension.swift in Sources */,
 				F0E28C6B238B9A00003884F7 /* AppDelegate.swift in Sources */,
 				F0E28C6D238B9A01003884F7 /* SceneDelegate.swift in Sources */,
 				F022C13B238BBF0F0048696E /* BottomLinedTextField.swift in Sources */,
@@ -316,14 +336,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = EJYWG5SDM6;
 				INFOPLIST_FILE = AccessibilitySample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ps.AccessibilitySample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usbank.OmniMobileApp.dev;
+				PRODUCT_NAME = USBAccessibility;
+				PROVISIONING_PROFILE_SPECIFIER = "OmniMobileApp Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -333,14 +357,18 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = EJYWG5SDM6;
 				INFOPLIST_FILE = AccessibilitySample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.ps.AccessibilitySample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.usbank.OmniMobileApp.dev;
+				PRODUCT_NAME = USBAccessibility;
+				PROVISIONING_PROFILE_SPECIFIER = "OmniMobileApp Dev";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
