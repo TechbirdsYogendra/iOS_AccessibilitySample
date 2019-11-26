@@ -22,7 +22,7 @@ class DynamicFontButton: UIButton {
     func customization(){
         titleLabel?.adjustsFontForContentSizeCategory = true
         titleLabel?.textAlignment = .center
-        
+
         self.removeConstraints(self.constraints)
         if titleLabel != nil{
             let leadingConstraint = NSLayoutConstraint(item: titleLabel!, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: self, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)

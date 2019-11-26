@@ -10,8 +10,6 @@ import Foundation
 
 enum LoginScreenAccessibilityLabels {
     static let helpButton = "Help Button"
-    static let usernameTextField = "Username"
-    static let passwordTextField = "Password"
     static let rememberMeSwitch = "Remember Me"
     static let loginHelpButton = "Login Help"
     static let loginButton = "Log in"
@@ -27,10 +25,8 @@ enum LoginScreenAccessibilityHints {
 
 extension ViewController {
     
-    func addAccessibilityToLoginScreen() {
+    func enableAccessibilityToLoginScreen() {
         addAccessibilityToHelpButton()
-        addAccessibilityToUsernameTextField()
-        addAccessibilityToPasswordTextField()
         addAccessibilityToRemenberLoginSwitch()
         addAccessibilityToLoginHelpButton()
         addAccessibilityToLoginButton()
@@ -42,16 +38,6 @@ extension ViewController {
     func addAccessibilityToHelpButton() {
         helpButton.isAccessibilityElement = true
         helpButton.accessibilityLabel = LoginScreenAccessibilityLabels.helpButton
-    }
-    
-    func addAccessibilityToUsernameTextField() {
-        userNameTextField.isAccessibilityElement = true
-        userNameTextField.accessibilityLabel = LoginScreenAccessibilityLabels.usernameTextField
-    }
-    
-    func addAccessibilityToPasswordTextField() {
-        passwordTextField.isAccessibilityElement = true
-        passwordTextField.accessibilityLabel = LoginScreenAccessibilityLabels.passwordTextField
     }
     
     func addAccessibilityToRemenberLoginSwitch() {
