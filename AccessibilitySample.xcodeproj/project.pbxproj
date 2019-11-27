@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		F022C13B238BBF0F0048696E /* BottomLinedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022C13A238BBF0F0048696E /* BottomLinedTextField.swift */; };
 		F022C13F238BBF770048696E /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F022C13E238BBF770048696E /* RoundedButton.swift */; };
+		F0B67DE4238E47EF0060C163 /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B67DE3238E47EF0060C163 /* HelpViewController.swift */; };
+		F0B67DE7238E4B670060C163 /* HelpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B67DE6238E4B670060C163 /* HelpViewModel.swift */; };
+		F0B67DEB238E5C220060C163 /* GuidedHelpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0B67DEA238E5C220060C163 /* GuidedHelpTableViewCell.swift */; };
 		F0E28C6B238B9A00003884F7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E28C6A238B9A00003884F7 /* AppDelegate.swift */; };
 		F0E28C6D238B9A01003884F7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E28C6C238B9A01003884F7 /* SceneDelegate.swift */; };
 		F0E28C6F238B9A01003884F7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0E28C6E238B9A01003884F7 /* ViewController.swift */; };
@@ -23,6 +26,9 @@
 /* Begin PBXFileReference section */
 		F022C13A238BBF0F0048696E /* BottomLinedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BottomLinedTextField.swift; sourceTree = "<group>"; };
 		F022C13E238BBF770048696E /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
+		F0B67DE3238E47EF0060C163 /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		F0B67DE6238E4B670060C163 /* HelpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewModel.swift; sourceTree = "<group>"; };
+		F0B67DEA238E5C220060C163 /* GuidedHelpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuidedHelpTableViewCell.swift; sourceTree = "<group>"; };
 		F0E28C67238B9A00003884F7 /* USBAccessibility.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = USBAccessibility.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F0E28C6A238B9A00003884F7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F0E28C6C238B9A01003884F7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -73,6 +79,38 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		F0B67DE2238E45E30060C163 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				F0E28C6E238B9A01003884F7 /* ViewController.swift */,
+				F0B67DE3238E47EF0060C163 /* HelpViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		F0B67DE5238E4B380060C163 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				F0B67DE6238E4B670060C163 /* HelpViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		F0B67DE8238E4C510060C163 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F0B67DE9238E5BC40060C163 /* TableViewCells */ = {
+			isa = PBXGroup;
+			children = (
+				F0B67DEA238E5C220060C163 /* GuidedHelpTableViewCell.swift */,
+			);
+			path = TableViewCells;
+			sourceTree = "<group>";
+		};
 		F0E28C5E238B99FF003884F7 = {
 			isa = PBXGroup;
 			children = (
@@ -92,11 +130,14 @@
 		F0E28C69238B9A00003884F7 /* AccessibilitySample */ = {
 			isa = PBXGroup;
 			children = (
+				F0B67DE9238E5BC40060C163 /* TableViewCells */,
+				F0B67DE8238E4C510060C163 /* Models */,
+				F0B67DE5238E4B380060C163 /* ViewModels */,
+				F0B67DE2238E45E30060C163 /* ViewControllers */,
 				F0F50F78238CE81600979D4E /* Extensions */,
 				F022C13D238BBF4A0048696E /* CustomViews */,
 				F0E28C6A238B9A00003884F7 /* AppDelegate.swift */,
 				F0E28C6C238B9A01003884F7 /* SceneDelegate.swift */,
-				F0E28C6E238B9A01003884F7 /* ViewController.swift */,
 				F0E28C70238B9A01003884F7 /* Main.storyboard */,
 				F0E28C73238B9A07003884F7 /* Assets.xcassets */,
 				F0E28C75238B9A07003884F7 /* LaunchScreen.storyboard */,
@@ -189,9 +230,12 @@
 				F022C13F238BBF770048696E /* RoundedButton.swift in Sources */,
 				F0F50F7C238CF31300979D4E /* DynamicFontButton.swift in Sources */,
 				F0F50F7E238D1FD600979D4E /* ViewController+Accessibility.swift in Sources */,
+				F0B67DE4238E47EF0060C163 /* HelpViewController.swift in Sources */,
 				F0F50F7A238CE8B200979D4E /* UIViewControllerExtension.swift in Sources */,
 				F0E28C6B238B9A00003884F7 /* AppDelegate.swift in Sources */,
+				F0B67DE7238E4B670060C163 /* HelpViewModel.swift in Sources */,
 				F0E28C6D238B9A01003884F7 /* SceneDelegate.swift in Sources */,
+				F0B67DEB238E5C220060C163 /* GuidedHelpTableViewCell.swift in Sources */,
 				F022C13B238BBF0F0048696E /* BottomLinedTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

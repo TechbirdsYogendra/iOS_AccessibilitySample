@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="eUZ-mu-2ql">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dPd-kd-TpS">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -10,7 +11,7 @@
         <!--View Controller-->
         <scene sceneID="qFh-d9-Peg">
             <objects>
-                <viewController id="eUZ-mu-2ql" customClass="ViewController" customModule="AccessibilitySample" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="eUZ-mu-2ql" customClass="ViewController" customModule="USBAccessibility" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ucg-cb-GrE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +23,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="889"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJA-5J-VTc">
-                                                <rect key="frame" x="375" y="5" width="35" height="35"/>
+                                                <rect key="frame" x="375" y="5" width="35" height="34.333333333333336"/>
                                                 <accessibility key="accessibilityConfiguration" label="Help Button"/>
                                                 <state key="normal" image="question"/>
                                             </button>
@@ -38,7 +39,7 @@
                                                 <color key="textColor" red="0.062745098040000002" green="0.1333333333" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOr-sH-cQV" customClass="BottomLinedTextField" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IOr-sH-cQV" customClass="BottomLinedTextField" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="154.66666666666666" width="374" height="44"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Please enter you user name"/>
                                                 <constraints>
@@ -47,7 +48,7 @@
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anc-o2-FAY" customClass="BottomLinedTextField" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="anc-o2-FAY" customClass="BottomLinedTextField" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="218.66666666666669" width="374" height="44"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Please enter your password"/>
                                                 <constraints>
@@ -81,7 +82,7 @@
                                                     <action selector="handleLoginHelpButtonAction:" destination="eUZ-mu-2ql" eventType="touchUpInside" id="mhC-nL-KNV"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-ae-Ewx" customClass="RoundedButton" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4xu-ae-Ewx" customClass="RoundedButton" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="377" width="374" height="55"/>
                                                 <color key="backgroundColor" red="0.90980392160000001" green="0.90980392160000001" blue="0.92156862750000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <accessibility key="accessibilityConfiguration" hint="Double tap to log in"/>
@@ -93,7 +94,7 @@
                                                     <color key="titleColor" red="0.37254901960784315" green="0.37647058823529411" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 </state>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-SG-pEg" customClass="DynamicFontButton" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="1SY-SG-pEg" customClass="DynamicFontButton" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="452" width="374" height="32"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <state key="normal" title="Create a username and password">
@@ -109,7 +110,7 @@
                                                 <color key="textColor" red="0.062745098040000002" green="0.1333333333" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5mF-0c-6JD" customClass="DynamicFontButton" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="5mF-0c-6JD" customClass="DynamicFontButton" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="20" y="568" width="374" height="32"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <state key="normal" title="Explore loans, cards &amp; more">
@@ -119,7 +120,7 @@
                                                     <userDefinedRuntimeAttribute type="boolean" keyPath="adjustsFontForContentSizeCategory" value="YES"/>
                                                 </userDefinedRuntimeAttributes>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="27x-1d-REo" customClass="DynamicFontButton" customModule="AccessibilitySample" customModuleProvider="target">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="27x-1d-REo" customClass="DynamicFontButton" customModule="USBAccessibility" customModuleProvider="target">
                                                 <rect key="frame" x="161" y="720" width="92" height="32"/>
                                                 <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
                                                 <state key="normal" title="Tour the app">
@@ -203,7 +204,126 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6hI-88-BiE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="124" y="-13"/>
+            <point key="canvasLocation" x="-28" y="-33"/>
+        </scene>
+        <!--Help View Controller-->
+        <scene sceneID="8WD-HR-XJc">
+            <objects>
+                <viewController id="dPd-kd-TpS" customClass="HelpViewController" customModule="USBAccessibility" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="P4z-QZ-WQ8">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2iY-dZ-qIr">
+                                <rect key="frame" x="20" y="64" width="30" height="39"/>
+                                <accessibility key="accessibilityConfiguration" hint="Double tap to dismiss page" label="Close"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle2"/>
+                                <state key="normal" title="X">
+                                    <color key="titleColor" red="0.062745098040000002" green="0.1333333333" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANi-4C-hkN">
+                                <rect key="frame" x="178.66666666666666" y="64" width="56.666666666666657" height="33.666666666666657"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.062745098040000002" green="0.1333333333" blue="0.43529411759999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search help topics" textAlignment="natural" adjustsFontForContentSizeCategory="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hWq-Jr-Jkx">
+                                <rect key="frame" x="20" y="133" width="374" height="34"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleCallout"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="grouped" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="18" sectionFooterHeight="18" translatesAutoresizingMaskIntoConstraints="NO" id="zV4-UF-t01">
+                                <rect key="frame" x="20" y="187" width="374" height="645"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoCell" id="Gzj-8N-p6L" customClass="GuidedHelpTableViewCell" customModule="USBAccessibility" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="55.333332061767578" width="374" height="23.333333969116211"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Gzj-8N-p6L" id="Tey-gp-5Vl">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="23.333333969116211"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z5P-wv-Qnz">
+                                                    <rect key="frame" x="5" y="5.0000000000000009" width="364" height="13.333333333333336"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" red="0.0" green="0.23921568630000001" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="z5P-wv-Qnz" firstAttribute="leading" secondItem="Tey-gp-5Vl" secondAttribute="leading" constant="5" id="Srd-KJ-ISo"/>
+                                                <constraint firstAttribute="trailing" secondItem="z5P-wv-Qnz" secondAttribute="trailing" constant="5" id="T1B-qO-BBb"/>
+                                                <constraint firstItem="z5P-wv-Qnz" firstAttribute="top" secondItem="Tey-gp-5Vl" secondAttribute="top" constant="5" id="t5J-SV-uTM"/>
+                                                <constraint firstAttribute="bottom" secondItem="z5P-wv-Qnz" secondAttribute="bottom" constant="5" id="y8g-7O-Lx7"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <accessibility key="accessibilityConfiguration">
+                                            <bool key="isElement" value="YES"/>
+                                        </accessibility>
+                                        <connections>
+                                            <outlet property="txtLabel" destination="z5P-wv-Qnz" id="4ax-tN-wSU"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GuidedCell" id="spY-Ep-WEY" customClass="GuidedHelpTableViewCell" customModule="USBAccessibility" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="78.666666030883789" width="374" height="43.333332061767578"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="spY-Ep-WEY" id="k9v-LK-CmH">
+                                            <rect key="frame" x="0.0" y="0.0" width="374" height="43.333332061767578"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qma-mq-rJI">
+                                                    <rect key="frame" x="5" y="15" width="369" height="13.333333333333336"/>
+                                                    <fontDescription key="fontDescription" style="UICTFontTextStyleCaption2"/>
+                                                    <color key="textColor" red="0.0" green="0.23921568630000001" blue="0.76862745099999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="qma-mq-rJI" secondAttribute="trailing" id="7mC-Km-1vN"/>
+                                                <constraint firstAttribute="bottom" secondItem="qma-mq-rJI" secondAttribute="bottom" constant="15" id="GS1-eq-rNW"/>
+                                                <constraint firstItem="qma-mq-rJI" firstAttribute="top" secondItem="k9v-LK-CmH" secondAttribute="top" constant="15" id="UL9-30-MaD"/>
+                                                <constraint firstItem="qma-mq-rJI" firstAttribute="leading" secondItem="k9v-LK-CmH" secondAttribute="leading" constant="5" id="q8r-Cq-t4P"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                        <connections>
+                                            <outlet property="txtLabel" destination="qma-mq-rJI" id="SMt-JS-aye"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="dPd-kd-TpS" id="FkA-lK-AAH"/>
+                                    <outlet property="delegate" destination="dPd-kd-TpS" id="e56-hu-ju2"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="hWq-Jr-Jkx" firstAttribute="top" secondItem="2iY-dZ-qIr" secondAttribute="bottom" constant="30" id="3pf-bd-HCQ"/>
+                            <constraint firstItem="hWq-Jr-Jkx" firstAttribute="leading" secondItem="aQ5-yc-WqC" secondAttribute="leading" constant="20" id="3ry-HI-jod"/>
+                            <constraint firstItem="aQ5-yc-WqC" firstAttribute="bottom" secondItem="zV4-UF-t01" secondAttribute="bottom" constant="30" id="FuN-L7-H91"/>
+                            <constraint firstItem="ANi-4C-hkN" firstAttribute="top" secondItem="aQ5-yc-WqC" secondAttribute="top" constant="20" id="MQK-4J-BGY"/>
+                            <constraint firstItem="aQ5-yc-WqC" firstAttribute="trailing" secondItem="zV4-UF-t01" secondAttribute="trailing" constant="20" id="enN-Zu-owE"/>
+                            <constraint firstItem="2iY-dZ-qIr" firstAttribute="leading" secondItem="aQ5-yc-WqC" secondAttribute="leading" constant="20" id="hbT-d8-xhu"/>
+                            <constraint firstItem="2iY-dZ-qIr" firstAttribute="top" secondItem="aQ5-yc-WqC" secondAttribute="top" constant="20" id="k64-EZ-KPj"/>
+                            <constraint firstItem="zV4-UF-t01" firstAttribute="top" secondItem="hWq-Jr-Jkx" secondAttribute="bottom" constant="20" id="kOl-Vd-Keu"/>
+                            <constraint firstItem="zV4-UF-t01" firstAttribute="leading" secondItem="aQ5-yc-WqC" secondAttribute="leading" constant="20" id="nI3-Js-dmy"/>
+                            <constraint firstItem="aQ5-yc-WqC" firstAttribute="trailing" secondItem="hWq-Jr-Jkx" secondAttribute="trailing" constant="20" id="ply-qm-KZR"/>
+                            <constraint firstItem="ANi-4C-hkN" firstAttribute="centerX" secondItem="P4z-QZ-WQ8" secondAttribute="centerX" id="x48-Gr-EVj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="aQ5-yc-WqC"/>
+                    </view>
+                    <connections>
+                        <outlet property="closeButton" destination="2iY-dZ-qIr" id="Cmn-rv-FG2"/>
+                        <outlet property="moreInfoTableView" destination="zV4-UF-t01" id="j3g-dl-cEL"/>
+                        <outlet property="searchTextField" destination="hWq-Jr-Jkx" id="ucp-2q-O1g"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sEj-yx-T6D" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653.62318840579712" y="-33.482142857142854"/>
         </scene>
     </scenes>
     <resources>

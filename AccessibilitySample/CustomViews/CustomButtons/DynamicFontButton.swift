@@ -19,9 +19,16 @@ class DynamicFontButton: UIButton {
         customization()
     }
     
+    var textAlignment: NSTextAlignment = .center {
+        didSet{
+            titleLabel?.textAlignment = textAlignment
+        }
+    }
+    
     func customization(){
         titleLabel?.adjustsFontForContentSizeCategory = true
-        titleLabel?.textAlignment = .center
+        titleLabel?.textAlignment = textAlignment
+        titleLabel?.numberOfLines = 0
 
         self.removeConstraints(self.constraints)
         if titleLabel != nil{
