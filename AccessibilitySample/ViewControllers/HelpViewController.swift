@@ -24,6 +24,7 @@ class HelpViewController: UIViewController {
     let footerHeightForMoreInfoSection: CGFloat = 50
     let headerHeightForMoreInfoSection: CGFloat = 50
     let cellRowHeight: CGFloat = 70
+   
     
     let infoCellIdentifier = "InfoCell"
     let guidedCellIdentifier = "GuidedCell"
@@ -34,18 +35,23 @@ class HelpViewController: UIViewController {
         // Enable titleLabel fint size dynamic.
         closeButton.titleLabel?.adjustsFontForContentSizeCategory = true
         
-        
+        //Make TableViewCell Height Dynamic
         moreInfoTableView.estimatedRowHeight = cellRowHeight
         moreInfoTableView.rowHeight = UITableView.automaticDimension
         
+        //Make TableView Header Height Dynamic
         moreInfoTableView.estimatedSectionHeaderHeight = headerHeightForMoreInfoSection
         
+        //
         addSearchImageToSearchTextField()
     }
     
+    //MARK: Private methods
+    
+    //Adds leftView of Search TextField
     private func addSearchImageToSearchTextField() {
-        
         let button = UIButton(frame: CGRect.zero)
+        button.adjustsImageSizeForAccessibilityContentSizeCategory = true
         button.setImage(UIImage(named: "search"), for: .normal)
         searchTextField.leftView = button
         searchTextField.leftViewMode = .always
@@ -84,19 +90,12 @@ extension HelpViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.adjustsFontForContentSizeCategory = true
-        label.accessibilityTraits = .header
+
         if section == 0 {
-            label.text = helpViewModel.moreInfoAbout
-            label.accessibilityLabel = helpViewModel.moreInfoAbout
+            return headerViewWith(helpViewModel.moreInfoAbout)
         } else {
-            label.text = helpViewModel.guidedHelp
-            label.accessibilityLabel = helpViewModel.guidedHelp
+            return headerViewWith(helpViewModel.guidedHelp)
         }
-        return label
     }
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -124,31 +123,39 @@ extension HelpViewController: UITableViewDelegate {
     }
 }
 
+//MARK:- Helper methods
 extension HelpViewController {
+    
+    var headerTextColor: UIColor {
+       return UIColor(red: 16/255.0, green: 34/255.0, blue: 111/255.0, alpha: 1.0)
+    }
+    
     func headerViewWith(_ title: String) -> UIView {
         
-        let uiView = UIView(frame: CGRect.zero)
-        let label = UILabel()
-        label.numberOfLines = 0
-        label.font = UIFont.preferredFont(forTextStyle: .headline)
-        label.adjustsFontForContentSizeCategory = true
-        label.accessibilityTraits = .header
-        label.text = helpViewModel.moreInfoAbout
-        label.accessibilityLabel = helpViewModel.moreInfoAbout
+        let headerView = UIView(frame: CGRect.zero)
         
-        uiView.addSubview(label)
+        let titleLabel = UILabel()
+        titleLabel.textColor = headerTextColor
+        titleLabel.numberOfLines = 0
+        titleLabel.font = UIFont.preferredFont(forTextStyle: .headline)
+        titleLabel.adjustsFontForContentSizeCategory = true
+        titleLabel.accessibilityTraits = .header
+        titleLabel.text = helpViewModel.moreInfoAbout
+        titleLabel.accessibilityLabel = helpViewModel.moreInfoAbout
         
-        let leadingConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.leading, relatedBy: NSLayoutConstraint.Relation.equal, toItem: uiView, attribute: NSLayoutConstraint.Attribute.leading, multiplier: 1, constant: 0)
+        headerView.addSubview(titleLabel)
         
-        let trailingConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.trailing, relatedBy: NSLayoutConstraint.Relation.equal, toItem: uiView, attribute: NSLayoutConstraint.Attribute.trailing, multiplier: 1, constant: 0)
+        titleLabel.translatesAutoresizingMaskIntoConstraints = false
         
-        let topConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.top, relatedBy: NSLayoutConstraint.Relation.equal, toItem: uiView, attribute: NSLayoutConstraint.Attribute.top, multiplier: 1, constant: 0)
+        let topSpacing: CGFloat = 10
+        let leadingSpacing: CGFloat = 0.0
         
-        let bottomConstraint = NSLayoutConstraint(item: label, attribute: NSLayoutConstraint.Attribute.bottom, relatedBy: NSLayoutConstraint.Relation.equal, toItem: uiView, attribute: NSLayoutConstraint.Attribute.bottom, multiplier: 1, constant: 0)
-        
-        uiView.addConstraints([leadingConstraint, trailingConstraint, topConstraint, bottomConstraint])
-        uiView.layoutIfNeeded()
-        return uiView
+        titleLabel.topAnchor.constraint(equalTo: headerView.topAnchor, constant: topSpacing).isActive = true
+        titleLabel.rightAnchor.constraint(equalTo: headerView.rightAnchor, constant: leadingSpacing).isActive = true
+        titleLabel.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: leadingSpacing).isActive = true
+        titleLabel.bottomAnchor.constraint(equalTo: headerView.bottomAnchor, constant: -topSpacing).isActive = true
+     
+        return headerView
         
         
     }
